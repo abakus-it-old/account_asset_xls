@@ -18,12 +18,11 @@ class account_asset_asset(models.Model):
         Update list in custom module to add/drop columns or change order
         """
         return [
-            'account', 'name', 'code', 'date_start',
+            'account', 'name', 'code', 'date',
             'value', 'salvage_value',
             'fy_start_value', 'fy_depr', 'fy_end_value',
             'fy_end_depr',
-            'method', 'method_number', 'prorata',
-        ]
+            'method', 'method_number', 'prorata']
     
     @api.model
     def _xls_removal_fields(self):
